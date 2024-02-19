@@ -1,0 +1,27 @@
+/* :hover */
+
+.pointer:not(.noHover):hover {
+    cursor: pointer;
+}
+
+.dropShadow:hover {
+    filter: drop-shadow(0px 0px 8px rgb(120, 120, 120));
+}
+
+.navLink:hover {
+    color: #AF8648;
+}
+
+.navIconBox:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.iconBox:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.pokemonCard:not(.noHover):hover {
+    box-shadow: 4px 4px 8px 0px #888888;
+    transform: scale(1.05);
+    transition: 125ms ease-out;
+}
