@@ -7,36 +7,30 @@ body {
     font-size: 1.6rem;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    padding: 1rem;
+    padding: 0rem 2rem 2rem 2rem;
     background: #eee;
 }
 
-.page-wrap {
-    display: grid;
-    grid-template-columns: 20rem auto;
-    grid-template-rows: 10rem 1fr auto;
-    gap: 2rem;
-}
-
-header,
-aside,
-footer {
+header {
     border: 1px solid #ccc;
     border-radius: 2rem;
     background: white;
+    margin-top: -3rem;
 }
 
 header {
-    grid-column: 1 / -1;
     height: 10rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem 0 21rem;
+    align-items: center;
+    text-align: center;
+    padding: 0 3rem 0 3rem;
+    z-index: 10;
     a {
         text-decoration: none;
         color: black;
     }
-    ah1 {
+    h1 {
         margin: 0;
     }
     .logo {
@@ -45,18 +39,17 @@ header {
     }
 }
 
+.headerBackground {
+    top: 0 !important;
+    height: 5rem;
+    width: 100vh;
+    background-color: #eee;
+    z-index: 8;
+}
+
 .icons {
     height: 2.5rem;
     margin: 0 1.5rem 0 1.5rem;
-}
-
-aside {
-    padding: 2rem;
-}
-
-footer {
-    grid-column: 1 / -1;
-    height: 20rem;
 }
 
 #content {
@@ -64,6 +57,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .dNone {
@@ -78,18 +72,7 @@ footer {
 
 .sticky {
     position: sticky;
-    top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    p {
-        background-color: #eee;
-        padding: 0.8rem 1.6rem;
-        border-radius: 2.4rem;
-        max-width: fit-content;
-        margin-block-start: 0.5rem;
-    }
+    top: 2rem;
 }
 
 .overlay {

@@ -23,8 +23,6 @@
 </head>
 
 <body onload="init()">
-
-    <!-- <body> -->
     <div class="overlay dNone" id="overlay"></div>
     <div class="overlay dNone" id="notImplemented" onclick="toggleNotImplemented()">
         <span class="overlayTextBox" align="center">This Function is not available.</span>
@@ -32,22 +30,16 @@
     <div class="overlay dNone" id="loading" onclick="toggleNotImplemented()">
         <span class="overlayTextBox" align="center"><span>
     </div>
-    <div class="page-wrap">
-        <header>
+    <div class="headerBackground sticky"></div>
+    <header class="sticky">
             <a href="#" class="dFlexCenter">
                 <img src="./icons/pokeball.png" alt="logo" class="logo">
                 <h1>PokéDex</h1>
             </a>
-            <nav class="dFlexCenter">
-                <a href="#" onclick="toggleNotImplemented()">
-                    <img src="./icons/menu.png" alt="burgerMenu" class="icons">
-                </a>
-            </nav>
+            <input placeholder="Search Pokemon" id="searchInputField" onkeyup="searchPokemon()" type="text">
+
         </header>
-        <aside>
-            <div class="sticky" id="stickyAside">
-            </div>
-        </aside>
+
         <main>
             <section id="content">
                 <div id="pkmn133" style="background-color: var(--type_normal);" class="pokemonCard pointer" onclick="toggleCard('pkmn133', event)">
@@ -150,10 +142,6 @@
     </div>
     </section>
     </main>
-
-    <!-- <footer></footer> -->
-    </div>
-
 </body>
 
 </html>

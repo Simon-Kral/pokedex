@@ -8,7 +8,7 @@ function generateEmptyCardHtml(id) {
             </div>
         <div class="pokemonCardBody">
             <div class="pokemonCardTypes"></div>
-            <img alt="pokemon-image" src="./img/missingno.png">
+            <img alt="pokemon-image">
         </div>
         <div id="pkmn${id}Info" class="pokemonInfo dNone">
             <div class="pokemonInfoHead">
