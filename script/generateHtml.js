@@ -35,9 +35,9 @@ function generateEmptyCardHtml(id) {
 }
 
 
-function generateTypesHtml(pokemon) {
+function generateTypesHtml() {
     let html = '';
-    let types = pokemon.types;
+    let types = currentPokemon.types;
     for (let i = 0; i < types.length; i++) {
         const type = types[i];
         html += `<span class="pokemonTypeField">${capitalize(type)}</span>`

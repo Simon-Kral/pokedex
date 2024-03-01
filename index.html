@@ -12,14 +12,11 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/colors.css">
     <link rel="stylesheet" href="./style/pokemon-card.css">
-    <link rel="stylesheet" href="./style/hover.css">
     <link rel="stylesheet" href="./style/mediaQuery.css">
 
     <script src="./script/main.js"></script>
-    <script src="./script/loadData.js"></script>
     <script src="./script/utilities.js"></script>
     <script src="./script/generateHtml.js"></script>
-    <script src="./script/addHtml.js"></script>
 </head>
 
 <body onload="init()">
@@ -36,7 +33,7 @@
                 <img src="./icons/pokeball.png" alt="logo" class="logo">
                 <h1>PokéDex</h1>
             </a>
-            <input placeholder="Search Pokemon" id="searchInputField" onkeyup="searchPokemon()" type="text">
+            <input placeholder="Search Pokemon" id="searchField" oninput="searchPokemon()" type="text">
 
         </header>
 

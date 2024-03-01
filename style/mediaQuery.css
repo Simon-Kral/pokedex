@@ -6,124 +6,16 @@
     }
 }
 
-
-/*
-@media(min-width: 1000px) {
-    .showMobile {
-        display: none !important;
-    }
-    .basketSection {
-        display: flex !important;
+@media(max-width: 520px) {
+    html {
+        font-size: 36%;
     }
 }
 
-@media(max-width: 1000px) {
-    .hide1000 {
-        display: none;
-    }
-    .fs14M {
-        font-size: 14px;
-    }
-    .basketSection {
-        background: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(2px);
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        z-index: 99;
-        overflow-y: auto;
-        display: none;
-    }
-    .basketBox {
-        background-color: white;
-        padding: 32px;
-        font-family: 'Noto Sans Bengali', sans-serif;
-        border: 2px solid rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        margin-top: 64px;
-        margin-bottom: 64px;
-    }
-    .openBasket {
-        display: flex;
-    }
-    .basketBoxHead {
-        justify-content: space-between;
-    }
-    .showMobile {
-        display: block !important;
+@media(max-width: 440px) {
+    header {
+        h1 {
+            display: none;
+        }
     }
 }
-
-@media(max-width: 500px) {
-    .hide500 {
-        display: none;
-    }
-    .restaurantInfoDeliveryBox {
-        flex-direction: column;
-    }
-    .navIconBox {
-        margin-right: 8px;
-        width: 32px;
-        height: 32px;
-    }
-    .navIcon {
-        padding: 6px;
-        height: 20px;
-        width: 20px;
-    }
-    .iconBox {
-        margin-right: 8px;
-        width: 32px;
-        height: 32px;
-    }
-    .basketBox {
-        min-width: 180px;
-        padding: 16px;
-    }
-    .basketItemDescription {
-        flex-direction: column;
-    }
-    b {
-        margin-bottom: 8px;
-    }
-    .separator {
-        margin-top: 12px;
-    }
-    .basketBoxHead {
-        width: 95%;
-    }
-    #basketItemsBox {
-        margin-top: 24px;
-    }
-    .restaurantInfoHeadline {
-        flex-direction: column;
-    }
-    h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-    .restaurantInfoIconBox {
-        margin-bottom: 8px;
-    }
-    h5 {
-        font-size: 16px;
-    }
-    .mealBoxHead {
-        align-items: center;
-    }
-    .overlayTextBox {
-        padding: 8px;
-        width: 200px;
-    }
-}
-
-@media(max-width: 400px) {
-    .hide400 {
-        display: none;
-    }
-} */
