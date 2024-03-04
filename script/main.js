@@ -309,17 +309,22 @@ function addMoves(pokemon) {
 
 
 async function searchPokemon() {
-    newSearchStarted = true;
-    const input = document.getElementById('searchField').value.toLowerCase();
-    searchData = [];
-    currentArray = input === '' ? pokemonData : searchData;
-    clear();
-    pokemonData.forEach(pokemon => {
-        if (pokemon.about.name.includes(input)) {;
-            searchData.push(pokemon)
-        }
-    });
-    cardCounter = 0;
-    newSearchStarted = false;
-    await renderCards();
+    if (isLoading == false) {
+        newSearchStarted = true;
+        const input = document.getElementById('searchField').value.toLowerCase();
+        currentArray = input === '' ? pokemonData : searchData;
+        clear();
+        searchData = [];
+        pokemonData.forEach(pokemon => {
+            if (pokemon.about.name.includes(input)) {;
+                searchData.push(pokemon)
+            }
+        });
+        cardCounter = 0;
+        newSearchStarted = false;
+        searchData.length > 0 ? await renderCards() : document.getElementById('content').innerHTML = 'no matching Pokemon';
+    } else {
+        await delay(100);
+        searchPokemon();
+    }
 }
