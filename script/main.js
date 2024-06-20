@@ -310,21 +310,36 @@ function addMoves(pokemon) {
 
 async function searchPokemon() {
     if (isLoading == false) {
-        newSearchStarted = true;
-        const input = document.getElementById('searchField').value.toLowerCase();
-        currentArray = input === '' ? pokemonData : searchData;
-        clear();
-        searchData = [];
-        pokemonData.forEach(pokemon => {
-            if (pokemon.about.name.includes(input)) {;
-                searchData.push(pokemon)
-            }
-        });
-        cardCounter = 0;
-        newSearchStarted = false;
-        searchData.length > 0 ? await renderCards() : document.getElementById('content').innerHTML = 'no matching Pokemon';
+        const input = initSearch();
+        console.log(input);
+        filterPokemon(input);
+        await renderMatches();
     } else {
-        await delay(100);
-        searchPokemon();
+        await retry();
     }
+}
+
+function initSearch() {
+    newSearchStarted = true;
+    cardCounter = 0;
+    searchData = [];
+    clear();
+    return document.getElementById('searchField').value.toLowerCase();
+}
+
+function filterPokemon(input) {
+    pokemonData.forEach(pokemon => {
+        if (pokemon.about.name.includes(input)) searchData.push(pokemon);
+    });
+    currentArray = input === '' ? pokemonData : searchData;
+}
+
+async function renderMatches() {
+    newSearchStarted = false;
+    searchData.length > 0 ? await renderCards() : document.getElementById('content').innerHTML = 'no matching Pokemon';
+}
+
+async function retry() {
+    await delay(200);
+    searchPokemon();
 }

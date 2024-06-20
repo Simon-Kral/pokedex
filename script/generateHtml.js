@@ -124,7 +124,7 @@ function generateEvolutionHtml(pokemon, i, j) {
                 <img class="evolutionImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.evolutions[i].basePokemon}.png" alt="pokemon-image">
                 <div class="evolutionDetail">`
     if (pokemon.evolutions[i].detail[j].hasOwnProperty('trigger')) { html += `<span>${pokemon.evolutions[i].detail[j].trigger.name.replace('-', ' ')}</span>` }
-    html += `<img class="evolutionArrow" src="./icons/longArrowRight.png" alt="">`
+    html += `<img class="evolutionArrow" src=".//img/icons/longArrowRight.png" alt="">`
     if (findEvoCondition(pokemon, i, j)) html += `<span>${findEvoCondition(pokemon, i, j)}</span>`
     html += `
                 </div>
